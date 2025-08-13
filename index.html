@@ -5,6 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nick Istre | Power Platform & Software Developer</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+    /* Fade-in effect */
+    .fade-in {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+    .fade-in.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    </style>
 </head>
 <body>
 
@@ -19,7 +31,7 @@
 </header>
 
 <!-- About -->
-<section id="about" class="section">
+<section id="about" class="section fade-in">
     <div class="container">
         <h2>About Me</h2>
         <p>I'm a Computer Engineer specializing in...</p>
@@ -33,7 +45,7 @@
 </section>
 
 <!-- Projects -->
-<section id="projects" class="section">
+<section id="projects" class="section fade-in">
     <div class="container">
         <h2>Projects</h2>
         <div class="grid">
@@ -47,49 +59,52 @@
                 <img src="project2.jpg" alt="Project Screenshot">
                 <h3>Graphics Auto-Resizer</h3>
                 <p>Created a tool that lets the user upload images and choose formats to automatically resize using Cloudinary.</p>
-                <a href="https://github.com/NickLIstre/auto-resizer" class="btn">View on GitHub</a>
+                <a href="https://github.com/NickLIstre/auto-resizer" class="btn github-btn">View on GitHub</a>
             </div>
             <div class="card">
                 <img src="project3.jpg" alt="Project Screenshot">
                 <h3>Combo Garden Website</h3>
                 <p>Created a website for users to upload combos for different fighting games.</p>
-                <a href="https://github.com/NickLIstre/combo-garden" class="btn">View on GitHub</a>
+                <a href="https://github.com/NickLIstre/combo-garden" class="btn github-btn">View on GitHub</a>
+                <a href="https://nicklistre.github.io/combo-garden/" target="_blank" class="btn demo-btn">Visit Site</a>
             </div><br>
             <div class="card">
                 <img src="project4.jpg" alt="Project Screenshot">
                 <h3>Auto-Legend Builder</h3>
                 <p>A tool that reads show data for tier pricing and generates a legend for a ticketing site.</p>
-                <a href="https://github.com/NickLIstre/AutoLegend" class="btn">View on GitHub</a>
+                <a href="https://github.com/NickLIstre/AutoLegend" class="btn github-btn">View on GitHub</a>
             </div>
             <div class="card">
                 <img src="project5.jpg" alt="Project Screenshot">
                 <h3>Ergonomic Game Controller</h3>
                 <p>Arduino program to create Ergonomic Video Game Controller using Arduino Leonardo and Joystick library. Designed to provide a cheaper alternative of controllers for people with physical disabilites.</p>
-                <a href="https://github.com/NickLIstre/ergonomic-game-controller" class="btn">View on GitHub</a>
+                <a href="https://github.com/NickLIstre/ergonomic-game-controller" class="btn github-btn">View on GitHub</a>
+                <a href="https://xl00192gs.wixsite.com/ergon-g-controller" target="_blank" class="btn demo-btn">View Demo Site</a>
             </div>
             <div class="card">
                 <img src="project6.jpg" alt="Project Screenshot">
                 <h3>Dahlia</h3>
                 <p>A website made as a gift to place pins with photo galleries on a globe for places to travel using Firebase and Globe.gl. </p>
-                <a href="https://github.com/NickLIstre/dahlia" class="btn">View on GitHub</a>
+                <a href="https://github.com/NickLIstre/dahlia" class="btn github-btn">View on GitHub</a>
             </div><br>
             <div class="card">
                 <img src="project7.jpg" alt="Project Screenshot">
                 <h3>Radius Search Tool</h3>
                 <p>A tool that provides the user a list of all previously-used studios within a given radius. </p>
-                <a href="https://github.com/NickLIstre/Radius-Search" class="btn">View on GitHub</a>
+                <a href="https://github.com/NickLIstre/Radius-Search" class="btn github-btn">View on GitHub</a>
             </div>
             <div class="card">
                 <img src="project8.jpg" alt="Project Screenshot">
                 <h3>Cubiquity</h3>
                 <p>Small game project practicing scene-switching and physics movement.</p>
-                <a href="https://github.com/NickLIstre/cubiquity" class="btn">View on GitHub</a>
+                <a href="https://github.com/NickLIstre/cubiquity" target="_blank" class="btn github-btn">View on GitHub</a>
+                <a href="" target="_blank" class="btn demo-btn">Play Now</a>
             </div>
             <div class="card">
                 <img src="project9.jpg" alt="Project Screenshot">
                 <h3>Contrast Checker Tool</h3>
                 <p>JS bookmark that compares text color to background and determines if it passes WCAG standards.</p>
-                <a href="https://github.com/NickLIstre/contrast-checker" class="btn">View on GitHub</a>
+                <a href="https://github.com/NickLIstre/contrast-checker" class="btn github-btn">View on GitHub</a>
             </div>
             <!-- Add more projects as needed -->
         </div>
@@ -97,7 +112,7 @@
 </section>
 
 <!-- Certifications -->
-<section id="certifications" class="section">
+<section id="certifications" class="section fade-in">
     <div class="container">
         <h2>Certifications</h2>
         <div class="grid">
@@ -112,7 +127,7 @@
 </section>
 
 <!-- Resume -->
-<section id="resume" class="section">
+<section id="resume" class="section fade-in">
     <div class="container">
         <h2>Resume</h2>
         <p>Download my resume below:</p>
@@ -121,7 +136,7 @@
 </section>
 
 <!-- Contact -->
-<section id="contact" class="section">
+<section id="contact" class="section fade-in">
     <div class="container">
         <h2>Contact</h2>
         <p>Email: <a href="mailto:nistre.dev@gmail.com">nistre.dev@gmail.com</a></p>
@@ -140,6 +155,22 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     document.querySelector(this.getAttribute('href')).scrollIntoView({
       behavior: 'smooth'
     });
+  });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const faders = document.querySelectorAll('.fade-in');
+  const appearOnScroll = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  faders.forEach(fader => {
+    appearOnScroll.observe(fader);
   });
 });
 </script>

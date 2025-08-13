@@ -14,9 +14,9 @@ body {
 }
 
 header.hero {
-    background: #4e6d58;
+    background: linear-gradient(135deg, #4e6d58, #395243);
     color: white;
-    padding: 80px 0;
+    padding: 100px 20px;
     text-align: center;
 }
 
@@ -29,6 +29,12 @@ header.hero p {
     margin: 10px auto;
 }
 
+.project-links {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
 .btn {
     display: inline-block;
     background: #ca8606;
@@ -37,16 +43,36 @@ header.hero p {
     margin-top: 10px;
     border-radius: 5px;
     text-decoration: none;
-    transition: 0.3s;
+    transition: background 0.3s, transform 0.2s;
 }
 
 .btn:hover {
     background: #e68900;
+    transform: translateY(-2px);
+}
+
+.github-btn {
+    background: #ca8606;
+}
+.github-btn:hover {
+    background: #333;
+    transform: scale(1.05);
+}
+
+.demo-btn {
+    background: #000000; /* websites/tools */
+}
+
+.demo-btn:hover {
+    background: #345c44;
+    transform: scale(1.05);
 }
 
 .section {
     padding: 50px 0;
 }
+
+
 
 .grid {
     display: grid;
@@ -60,11 +86,22 @@ header.hero p {
     border-radius: 10px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
 }
 
 .card img {
     width: 100%;
     border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.card:hover img {
+    transform: scale(1.05);
 }
 
 footer {
