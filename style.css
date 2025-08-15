@@ -86,6 +86,9 @@ header.hero p {
     border-radius: 10px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 400px; 
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -102,6 +105,10 @@ header.hero p {
 
 .card:hover img {
     transform: scale(1.05);
+}
+
+.card-footer {
+    margin-top: auto;
 }
 
 /* Fade-in effect */
