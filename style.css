@@ -104,6 +104,17 @@ header.hero p {
     transform: scale(1.05);
 }
 
+/* Fade-in effect */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 footer {
     text-align: center;
     padding: 20px;

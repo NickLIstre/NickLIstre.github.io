@@ -5,18 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nick Istre | Power Platform & Software Developer</title>
     <link rel="stylesheet" href="style.css">
-    <style>
-    /* Fade-in effect */
-    .fade-in {
-        opacity: 0;
-        transform: translateY(20px);
-        transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-    }
-    .fade-in.visible {
-        opacity: 1;
-        transform: translateY(0);
-    }
-    </style>
 </head>
 <body>
 
@@ -54,25 +42,28 @@
                 <h3>PA Studio Creation Tool</h3>
                 <p>Automated the creation and distribution of contracts to clients to generate studio records using Power Automate and Adobe Sign.</p>
                 <a href="#" class="btn">View on GitHub</a>
+                <a href="pages/StudioCreationDemo.html" target="_blank" class="btn demo-btn">View Demo</a>
             </div>
             <div class="card">
                 <img src="project2.jpg" alt="Project Screenshot">
                 <h3>Graphics Auto-Resizer</h3>
                 <p>Created a tool that lets the user upload images and choose formats to automatically resize using Cloudinary.</p>
                 <a href="https://github.com/NickLIstre/auto-resizer" class="btn github-btn">View on GitHub</a>
+                <a href="pages/AutoResizer.html" target="_blank" class="btn demo-btn">View Demo</a>
             </div>
             <div class="card">
                 <img src="project3.jpg" alt="Project Screenshot">
                 <h3>Combo Garden Website</h3>
                 <p>Created a website for users to upload combos for different fighting games.</p>
                 <a href="https://github.com/NickLIstre/combo-garden" class="btn github-btn">View on GitHub</a>
-                <a href="https://nicklistre.github.io/combo-garden/" target="_blank" class="btn demo-btn">Visit Site</a>
+                <a href="https://combogarden.blackbaccaraproductions.com" target="_blank" class="btn demo-btn">Visit Site</a>
             </div><br>
             <div class="card">
                 <img src="project4.jpg" alt="Project Screenshot">
                 <h3>Auto-Legend Builder</h3>
                 <p>A tool that reads show data for tier pricing and generates a legend for a ticketing site.</p>
                 <a href="https://github.com/NickLIstre/AutoLegend" class="btn github-btn">View on GitHub</a>
+                <a href="pages/AutoLegend.html" target="_blank" class="btn demo-btn">View Demo</a>
             </div>
             <div class="card">
                 <img src="project5.jpg" alt="Project Screenshot">
@@ -86,12 +77,14 @@
                 <h3>Dahlia</h3>
                 <p>A website made as a gift to place pins with photo galleries on a globe for places to travel using Firebase and Globe.gl. </p>
                 <a href="https://github.com/NickLIstre/dahlia" class="btn github-btn">View on GitHub</a>
+                <a href="pages/Dahlia.html" target="_blank" class="btn demo-btn">View Demo</a>
             </div><br>
             <div class="card">
                 <img src="project7.jpg" alt="Project Screenshot">
                 <h3>Radius Search Tool</h3>
                 <p>A tool that provides the user a list of all previously-used studios within a given radius. </p>
                 <a href="https://github.com/NickLIstre/Radius-Search" class="btn github-btn">View on GitHub</a>
+                <a href="pages/RadiusSearch.html" target="_blank" class="btn demo-btn">View Demo</a>
             </div>
             <div class="card">
                 <img src="project8.jpg" alt="Project Screenshot">
@@ -105,6 +98,7 @@
                 <h3>Contrast Checker Tool</h3>
                 <p>JS bookmark that compares text color to background and determines if it passes WCAG standards.</p>
                 <a href="https://github.com/NickLIstre/contrast-checker" class="btn github-btn">View on GitHub</a>
+                <a href="pages/ContrastChecker.html" target="_blank" class="btn demo-btn">View Demo</a>
             </div>
             <!-- Add more projects as needed -->
         </div>
@@ -148,32 +142,6 @@
     <p>© 2025 Nick Istre / Black Baccara Productions</p>
 </footer>
 
-<script>
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function (e) {
-    e.preventDefault();
-    document.querySelector(this.getAttribute('href')).scrollIntoView({
-      behavior: 'smooth'
-    });
-  });
-});
-
-document.addEventListener("DOMContentLoaded", () => {
-  const faders = document.querySelectorAll('.fade-in');
-  const appearOnScroll = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.1 });
-
-  faders.forEach(fader => {
-    appearOnScroll.observe(fader);
-  });
-});
-</script>
-
+<script src = script.js></script>
 </body>
 </html>
