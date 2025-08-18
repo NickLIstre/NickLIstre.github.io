@@ -22,3 +22,14 @@ document.addEventListener("DOMContentLoaded", () => {
     appearOnScroll.observe(fader);
   });
 });
+
+// Dark mode toggle
+const toggle = document.createElement("button");
+toggle.id = "theme-toggle";
+toggle.textContent = "☀️";
+const header = document.querySelector("header"); 
+header.appendChild(toggle);
+toggle.addEventListener("click", () => {
+  document.body.classList.toggle("dark");
+  toggle.textContent = document.body.classList.contains("dark") ?  "🌙": "☀️";
+});
