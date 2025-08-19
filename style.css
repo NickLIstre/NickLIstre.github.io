@@ -3,6 +3,7 @@ body {
     margin: 0;
     line-height: 1.6;
     background: #f8f9fa;
+    background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='2' cy='2' r='2' fill='%23e0e0e0'/%3E%3C/svg%3E");
     color: #333;
     transition: background-color 0.3s ease, color 0.3s ease
 }
@@ -10,6 +11,7 @@ body {
 body.dark {
     background: #121212;
     color: #eaeaea;
+    background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='2' cy='2' r='2' fill='%23222222'/%3E%3C/svg%3E");
 }
 body.dark .card {
     background: #1e1e1e;
@@ -69,6 +71,7 @@ header.hero p {
 }
 
 .btn {
+    cursor: pointer;
     display: inline-block;
     background: #ca8606;
     color: white;
@@ -100,6 +103,40 @@ header.hero p {
     background: #345c44;
     transform: scale(1.05);
 }
+
+.social-links {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.icon-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 24px;
+  color: white;
+  background-color: #333;
+  text-decoration: none;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.icon-btn.linkedin {
+  background-color: #0a66c2;
+}
+
+.icon-btn.github {
+  background-color: #24292e;
+}
+
+.icon-btn:hover {
+  transform: scale(1.1);
+  filter: brightness(1.2);
+}
+
 
 .section {
     padding: 50px 0;
