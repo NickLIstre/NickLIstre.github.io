@@ -62,7 +62,7 @@
                 <a href="https://github.com/NickLIstre/combo-garden" class="btn github-btn">View on GitHub</a>
                 <a href="https://combogarden.blackbaccaraproductions.com" target="_blank" class="btn demo-btn">Visit Site</a>
                 </div>
-            </div><br>
+            </div>
             <div class="card">
                 <img src="images/AutoLegend1.png" alt="Project Screenshot">
                 <h3>Auto-Legend Builder</h3>
@@ -89,7 +89,7 @@
                 <a href="https://github.com/NickLIstre/dahlia" class="btn github-btn">View on GitHub</a>
                 <a href="pages/Dahlia.html" target="_blank" class="btn demo-btn">View Demo</a>
                 </div>
-            </div><br>
+            </div>
             <div class="card">
                 <img src="images/RadiusSearch1.png" alt="Project Screenshot">
                 <h3>Radius Search Tool</h3>
@@ -150,10 +150,29 @@
 <section id="contact" class="section fade-in">
     <div class="container">
         <h2>Contact</h2>
-        <p>Email: <a href="mailto:nistre.dev@gmail.com">nistre.dev@gmail.com</a></p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/nicholas-istre/" target="_blank">linkedin.com/in/nicholas-istre</a></p>
+        <form id="contact-form" action="mailto:nick@blackbaccaraproductions.com" method="POST" enctype="text/plain">
+        <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+        <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+         <label for="subject">Subject:</label>
+            <input type="text" id="subject" name="subject" required>   
+        <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+  <button type="submit" class="btn">Send Message</button>
+</form>
     </div>
 </section>
+
+<section id="links" class="section fade-in">
+    <div class="container">
+        <h2>Links</h2>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/nicholas-istre/" target="_blank">linkedin.com/in/nicholas-istre</a></p>
+        <p>GitHub: <a href="https://github.com/NickLIstre" target="_blank">github.com/NickLIstre</a></p>
+    </div>
+</section>
+
 
 <footer>
     <p>2025 Nick Istre / Black Baccara Productions</p>
