@@ -84,7 +84,7 @@ header.hero p {
 .btn {
     cursor: pointer;
     display: inline-block;
-    background: #ca8606;
+    background: #9c6705;
     color: white;
     padding: 10px 20px;
     margin-top: 10px;
@@ -94,12 +94,12 @@ header.hero p {
 }
 
 .btn:hover {
-    background: #e68900;
+    background: #9c6705;
     transform: translateY(-2px);
 }
 
 .github-btn {
-    background: #ca8606;
+    background: #9c6705;
 }
 .github-btn:hover {
     background: #333;
