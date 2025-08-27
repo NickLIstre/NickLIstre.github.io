@@ -33,3 +33,16 @@ toggle.addEventListener("click", () => {
   document.body.classList.toggle("dark");
   toggle.textContent = document.body.classList.contains("dark") ?  "🌙": "☀️";
 });
+
+// Image gallery
+let currentIndex = 0;
+const galleryImg = document.getElementById("gallery-img");
+galleryImg.src = images[currentIndex];
+document.querySelector(".arrow.left").addEventListener("click", () => {
+  currentIndex = (currentIndex - 1 + images.length) % images.length;
+  galleryImg.src = images[currentIndex];
+});
+document.querySelector(".arrow.right").addEventListener("click", () => {
+  currentIndex = (currentIndex + 1) % images.length;
+  galleryImg.src = images[currentIndex];
+});

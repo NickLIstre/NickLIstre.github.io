@@ -231,6 +231,45 @@ header.hero p {
     transform: translateY(0);
 }
 
+.gallery {
+  position: relative;
+  width: 600px;
+  margin: auto;
+}
+
+.gallery img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  color: rgb(0, 0, 0);
+  font-size: 2rem;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: color 0.1s ease;
+}
+
+.arrow:hover {
+  color: #4e6d58;
+  transition: color 0.1s ease;
+}
+
+.left {
+  left: 10px;
+}
+
+.right {
+  right: 10px;
+}
+
+
 footer {
     text-align: center;
     padding: 20px;
