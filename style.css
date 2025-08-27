@@ -248,7 +248,7 @@ header.hero p {
   transform: translateY(-50%);
   background: transparent;
   border: none;
-  color: rgb(0, 0, 0);
+  color: #4e6d58;
   font-size: 2rem;
   padding: 10px;
   cursor: pointer;
@@ -257,7 +257,7 @@ header.hero p {
 }
 
 .arrow:hover {
-  color: #4e6d58;
+  color: #688f74;
   transition: color 0.1s ease;
 }
 
@@ -275,4 +275,8 @@ footer {
     padding: 20px;
     background: #4e6d58;
     color: white;
+}
+
+body.dark footer {
+  background: linear-gradient(135deg, #2e4033, #1a261d);
 }
