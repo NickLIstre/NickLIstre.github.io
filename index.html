@@ -26,7 +26,7 @@
         <p>I'm a Computer Engineer specializing in...</p>
         <ul>
             <li><strong>Automation:</strong> Power Automate Cloud/Desktop, RPA, Power Platform</li>
-            <li><strong>Programming:</strong> JavaScript, HTML, CSS</li>
+            <li><strong>Programming:</strong> Java, C++, JavaScript, HTML, CSS</li>
             <li><strong>Tools:</strong> VS Code, Power BI, SharePoint, Teams, GitHub</li>
             <li><strong>Other:</strong> Process documentation, workflow design</li>
         </ul>
@@ -57,7 +57,7 @@
             </div>
             <div class="card">
                 <img src="images/example/ComboGarden.png" alt="Combo Garden Screenshot">
-                <h3>Combo Garden Website</h3>
+                <h3>Combo Garden</h3>
                 <p>A website for users to upload combos for different fighting games.</p>
                 <div class = "card-footer">
                 <a href="https://github.com/NickLIstre/combo-garden" class="btn github-btn">View on GitHub</a>
@@ -149,17 +149,27 @@
 
 <!-- Contact -->
 <section id="contact" class="section fade-in">
-    <div class="container">
-        <h2>Contact</h2>
-        <form id="contact-form" action="mailto:nick@blackbaccaraproductions.com" method="GET">
-            <label for="subject">Subject:</label>
-            <input type="text" id="subject" name="subject" required>
-            <label for="message">Message:</label>
-            <textarea id="message" name="body" rows="5" required></textarea>
-            <button type="submit" class="btn">Send Message</button>
-        </form>
-    </div>
+  <div class="container">
+    <h2>Contact</h2>
+    <form id="contact-form">
+      <label for="subject">Subject:</label>
+      <input type="text" id="subject" name="subject" required>
+
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+  </div>
 </section>
+<script>
+  document.getElementById("contact-form").addEventListener("submit", function(e) {
+    e.preventDefault();
+    const subject = encodeURIComponent(document.getElementById("subject").value);
+    const body = encodeURIComponent(document.getElementById("message").value);
+    window.location.href = `mailto:nick@blackbaccaraproductions.com?subject=${subject}&body=${body}`;
+  });
+</script>
 
 <!-- Links -->
 <section id="links" class="section fade-in">
