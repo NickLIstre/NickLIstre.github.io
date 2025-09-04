@@ -40,6 +40,57 @@ body.dark header.hero {
   transform: scale(1.1);
 }
 
+/* Shooting star animation (dark mode) */
+.shooting-star {
+  position: fixed;
+  width: 3px;
+  height: 3px;
+  background: white;
+  box-shadow: 0 0 6px 2px white;
+  border-radius: 50%;
+  transform: rotate(45deg);
+  animation: shoot 1s ease-out forwards;
+  z-index: 9999;
+}
+
+@keyframes shoot {
+  0% {
+    transform: translate(0, 0) rotate(45deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(var(--xTravel, 300px), var(--yTravel, 150px)) rotate(45deg);
+    opacity: 0;
+  }
+}
+
+/* Sunburst animation (light mode) */
+.sunburst {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: radial-gradient(circle, #e2b451 40%, transparent 70%);
+  animation: sunburst 0.8s ease-out forwards;
+  opacity: 0.7;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes sunburst {
+  0% {
+    width: 0;
+    height: 0;
+    opacity: 1;
+  }
+  100% {
+    width: 300px;
+    height: 300px;
+    opacity: 0;
+  }
+}
+
 /* Fade-in effect */
 .fade-in {
     opacity: 0;

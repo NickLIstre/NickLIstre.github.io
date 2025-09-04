@@ -29,10 +29,64 @@ toggle.id = "theme-toggle";
 toggle.textContent = "☀️";
 const header = document.querySelector("header"); 
 header.appendChild(toggle);
+
 toggle.addEventListener("click", () => {
+  const goingDark = !document.body.classList.contains("dark");
   document.body.classList.toggle("dark");
-  toggle.textContent = document.body.classList.contains("dark") ?  "🌙": "☀️";
+
+  // Update icon
+  toggle.textContent = document.body.classList.contains("dark") ? "🌙" : "☀️";
+
+  if (goingDark) {
+    for (let i = 0; i < 10; i++) {
+      createShootingStar();
+    }
+  } else {
+    createSunburst();
+  }
 });
+
+function createShootingStar() {
+  const star = document.createElement("div");
+  star.classList.add("shooting-star");
+
+  // Random starting position in the top half of screen
+  star.style.top = `${Math.random() * 50}%`;
+  star.style.left = `${Math.random() * 80}%`;
+
+  star.style.animationDelay = `${Math.random() * 0.4}s`;
+
+  const xTravel = 200 + Math.random() * 200;
+  const yTravel = 100 + Math.random() * 200;
+  star.style.setProperty("--xTravel", `${xTravel}px`);
+  star.style.setProperty("--yTravel", `${yTravel}px`);
+
+  document.body.appendChild(star);
+
+  star.addEventListener("animationend", () => star.remove());
+}
+
+function createSunburst() {
+  const burst = document.createElement("div");
+  burst.classList.add("sunburst");
+
+  // Get the theme-toggle button's position
+  const btn = document.getElementById("theme-toggle");
+  const rect = btn.getBoundingClientRect();
+
+  const x = rect.left + rect.width / 2;
+  const y = rect.top + rect.height / 2;
+
+  // Set burst position
+  burst.style.left = `${x}px`;
+  burst.style.top = `${y}px`;
+  burst.style.transform = "translate(-50%, -50%)";
+
+  document.body.appendChild(burst);
+
+  // Remove after animation
+  burst.addEventListener("animationend", () => burst.remove());
+}
 
 // Image gallery
 let currentIndex = 0;
