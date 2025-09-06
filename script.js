@@ -23,11 +23,15 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-// Dark mode toggle
+
+let theme = localStorage.getItem("theme");
+if (theme === "dark") {
+  document.body.classList.add("dark");
+}
 const toggle = document.createElement("button");
 toggle.id = "theme-toggle";
-toggle.textContent = "☀️";
-const header = document.querySelector("header"); 
+toggle.textContent = theme === "dark" ? "🌙" : "☀️";
+const header = document.querySelector("header");
 header.appendChild(toggle);
 
 toggle.addEventListener("click", () => {
@@ -36,6 +40,7 @@ toggle.addEventListener("click", () => {
 
   // Update icon
   toggle.textContent = document.body.classList.contains("dark") ? "🌙" : "☀️";
+  localStorage.setItem("theme", document.body.classList.contains("dark") ? "dark" : "light");
 
   if (goingDark) {
     for (let i = 0; i < 10; i++) {
