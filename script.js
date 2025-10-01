@@ -31,6 +31,10 @@ if (theme === "dark") {
 const toggle = document.createElement("button");
 toggle.id = "theme-toggle";
 toggle.textContent = theme === "dark" ? "🌙" : "☀️";
+// Accessibility
+toggle.setAttribute('aria-label', theme === 'dark' ? 'Toggle theme, currently dark' : 'Toggle theme, currently light');
+toggle.setAttribute('aria-pressed', theme === 'dark' ? 'true' : 'false');
+toggle.title = theme === 'dark' ? 'Switch to light theme' : 'Switch to dark theme';
 const header = document.querySelector("header");
 header.appendChild(toggle);
 
@@ -39,8 +43,13 @@ toggle.addEventListener("click", () => {
   document.body.classList.toggle("dark");
 
   // Update icon
-  toggle.textContent = document.body.classList.contains("dark") ? "🌙" : "☀️";
-  localStorage.setItem("theme", document.body.classList.contains("dark") ? "dark" : "light");
+  const isDark = document.body.classList.contains("dark");
+  toggle.textContent = isDark ? "🌙" : "☀️";
+  // Update accessibility attributes
+  toggle.setAttribute('aria-label', isDark ? 'Toggle theme, currently dark' : 'Toggle theme, currently light');
+  toggle.setAttribute('aria-pressed', isDark ? 'true' : 'false');
+  toggle.title = isDark ? 'Switch to light theme' : 'Switch to dark theme';
+  localStorage.setItem("theme", isDark ? "dark" : "light");
 
   if (goingDark) {
     for (let i = 0; i < 10; i++) {
