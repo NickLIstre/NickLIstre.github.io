@@ -141,6 +141,8 @@ header.hero p {
     margin-top: 10px;
     border-radius: 5px;
     text-decoration: none;
+    border: none;
+    outline: none;
     transition: background 0.3s, transform 0.2s;
 }
 
@@ -242,6 +244,8 @@ header.hero p {
 
 .card-footer {
     margin-top: auto;
+    display: flex;
+    flex-direction: column;
     gap: 0.5rem;
 }
 

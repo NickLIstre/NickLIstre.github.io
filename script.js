@@ -7,6 +7,18 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
+// See More Projects Toggle
+const seeMoreBtn = document.getElementById('see-more-btn');
+const extraProjects = document.getElementById('extra-projects');
+
+if (seeMoreBtn) {
+  seeMoreBtn.addEventListener('click', () => {
+    const isHidden = extraProjects.style.display === 'none';
+    extraProjects.style.display = isHidden ? 'grid' : 'none';
+    seeMoreBtn.textContent = isHidden ? 'See Less Projects' : 'See More Projects';
+  });
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   const faders = document.querySelectorAll('.fade-in');
   const appearOnScroll = new IntersectionObserver((entries, observer) => {
